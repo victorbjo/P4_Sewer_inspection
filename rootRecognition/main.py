@@ -1,5 +1,6 @@
 import numpy as np
 import cv2
+import isolate
 
 imgOriginal = cv2.imread('roots_IMG1.jpg',1) # RGB
 imgOriginalHSV = cv2.cvtColor(imgOriginal, cv2.COLOR_BGR2HSV) # HSV
@@ -11,12 +12,19 @@ blank_image = np.zeros((height,width,3), np.uint8)
 
 
 # Threshold values for the blue channel
-hsv_low = np.array([100, 0, 0])
-hsv_high = np.array([255, 255, 255])
+## Light roots
+light_hsv_low = np.array([13, 10, 50])
+light_hsv_high = np.array([200, 11, 255])
+
+## Dark roots
+dark_hsv_low = np.array([90, 30, 80])
+dark_hsv_high = np.array([95, 58, 115])
+
 
 # inRange function
 #imgThresholded = cv2.inRange(np.float32(blue_channel), thresh_low, thresh_high)
-imgHSVthresholded = cv2.inRange(np.float32(imgOriginalHSV), hsv_low, hsv_high)
+light_imgHSVthresholded = cv2.inRange(np.float32(imgOriginalHSV), light_hsv_low, light_hsv_high)
+dark_imgHSVthresholded = cv2.inRange(np.float32(imgOriginalHSV), dark_hsv_low, dark_hsv_high)
 
 #edges = cv2.Canny(blue_channel,100,200)
 
