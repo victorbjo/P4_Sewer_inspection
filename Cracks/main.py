@@ -27,7 +27,8 @@ for i in range(len(images)):
     #im3.append(cv2.morphologyEx(im2[i], cv2.MORPH_CLOSE, kernelEllipse2))
     contours, hierarchy = cv2.findContours(im2[i], cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
     cv2.drawContours(con[i], contours, -1, (0, 255, 0), 3)
-    cv2.imshow("ss", images[i])
+    cv2.imshow("ss", con[i])
+    print("AHH SHIET")
     cv2.waitKey(0)
     # Creates a morphology kernel of 7x7 size in the shape of an ellipse
     # plt.subplot(4, 3, i+1), plt.imshow(hsv[i])
