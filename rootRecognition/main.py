@@ -3,15 +3,15 @@ import cv2
 import isolate
 
 imgOriginal = cv2.imread('roots_IMG1.jpg',1) # RGB
+imgOriginal = imgOriginal = isolate.findBackPlate(imgOriginal)
 imgOriginalHSV = cv2.cvtColor(imgOriginal, cv2.COLOR_BGR2HSV) # HSV
-#blue_channel = imgOriginal[:,:,0] # Blue channel
 
 # Get size of img. Creates a new blank image of the img size
 height, width, channels = imgOriginal.shape
 blank_image = np.zeros((height,width,3), np.uint8)
 
 
-# Threshold values for the blue channel
+# Threshold values 
 ## Light roots
 light_hsv_low = np.array([13, 10, 50])
 light_hsv_high = np.array([200, 11, 255])
@@ -59,7 +59,8 @@ def ResizeWithAspectRatio(image, width=None, height=None, inter=cv2.INTER_AREA):
 
 
 # Show pictures
-cv2.imshow('img 1', imgHSVthresholded)
+cv2.imshow('img light', light_imgHSVthresholded)
+cv2.imshow('img dark', dark_imgHSVthresholded)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
