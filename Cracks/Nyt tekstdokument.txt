@@ -19,3 +19,5 @@ def findBackPlate(img):
     except:
         output = img
     return (output)
+
+sker der?
