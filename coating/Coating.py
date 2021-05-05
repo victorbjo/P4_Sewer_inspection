@@ -8,7 +8,6 @@ def getCoating (img):
     isCoating = 0
     
     thresh = []
-    edge = []
     morph_open = []
     morph_erode = []
     morph_close = []
