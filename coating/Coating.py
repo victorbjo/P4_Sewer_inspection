@@ -1,12 +1,8 @@
 import cv2
-import glob
 import numpy as np
-from matplotlib import pyplot as plt
-import math
 
 def getCoating (img):
     images = []
-    #images = [cv2.imread(file) for file in glob.glob("*.PNG")] + [cv2.imread(file) for file in glob.glob("*.JPG")]
     images.append(img)
 
     isCoating = 0
@@ -17,7 +13,7 @@ def getCoating (img):
     morph_erode = []
     morph_close = []
     img_contours = []
-    print(len(images))
+    
     for i in range(len(images)):
         images[i] = cv2.resize(images[i], (int(images[i].shape[1] /3), int(images[i].shape[0]/3)))
 
@@ -25,7 +21,7 @@ def getCoating (img):
         thresh.append(cv2.inRange(images[i], (100,20,0), (140,255,255)))
 
         
-        # Morphologi
+        # Morphology
         kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (15, 15))
         morph_open.append(cv2.morphologyEx(thresh[i], cv2.MORPH_OPEN, kernel, iterations=1))
         kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (7, 7))
@@ -33,11 +29,11 @@ def getCoating (img):
         kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (7, 7))
         morph_close.append(cv2.morphologyEx(morph_erode[i], cv2.MORPH_CLOSE, kernel, iterations=1))
 
-        # contours
+        # Contours
         contours, hierarchy = cv2.findContours(morph_close[i], cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)
         img_contours.append(np.zeros(images[i].shape))
 
-        # features
+        # Features
         contourIndex = np.zeros(len(contours))
         area = np.zeros(len(contours))
         perimeter = np.zeros(len(contours))
