@@ -1,0 +1,841 @@
+
+
+Image - pictures\coating1.png
+Roots: [ True]
+Coating: 1
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\coating2.png
+Roots: [ True]
+Coating: 1
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\coating3.png
+Roots: [ True]
+Coating: 1
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\coating4.png
+Roots: [False]
+Coating: 1
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\offset1.png
+Roots: [ True]
+Coating: 0
+WaterLevel: 0
+Offset: 1
+Crack: 0
+
+Image - pictures\offset2.png
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 1
+Crack: 0
+
+Image - pictures\offset3.png
+Roots: [ True]
+Coating: 0
+WaterLevel: 0
+Offset: 1
+Crack: 0
+
+Image - pictures\offset4.png
+Roots: [ True]
+Coating: 0
+WaterLevel: 0
+Offset: 1
+Crack: 0
+
+Image - pictures\offset5.png
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 1
+Crack: 0
+
+Image - pictures\offset6.png
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 1
+Crack: 0
+
+Image - pictures\offset7.png
+Roots: [ True]
+Coating: 0
+WaterLevel: 0
+Offset: 1
+Crack: 0
+
+Image - pictures\coating10.jpg
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\coating11.jpg
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\coating12.jpg
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 1
+Crack: 0
+
+Image - pictures\coating13.jpg
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\coating14.jpg
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\coating15.jpg
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\coating16.jpg
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\coating17.jpg
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\coating18.jpg
+Roots: [ True]
+Coating: 0
+WaterLevel: 0
+Offset: 1
+Crack: 0
+
+Image - pictures\coating19.jpg
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\coating20.jpg
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\coating21.jpg
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\coating22.jpg
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\coating23.jpg
+Roots: [False]
+Coating: 1
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\coating24.jpg
+Roots: [ True]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\coating25.jpg
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\coating26.jpg
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\coating27.jpg
+Roots: [ True]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\coating28.jpg
+Roots: [ True]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\coating29.jpg
+Roots: [ True]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\coating30.jpg
+Roots: [ True]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\coating31.jpg
+Roots: [ True]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\coating32.jpg
+Roots: [ True]
+Coating: 0
+WaterLevel: 0
+Offset: 1
+Crack: 0
+
+Image - pictures\coating34.jpg
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\coating5.jpg
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\coating6.jpg
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\coating7.jpg
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\coating8.jpg
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\coating9.jpg
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\crack1.jpg
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\crack10.jpg
+Roots: [ True]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\crack11.jpg
+Roots: [ True]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\crack12.jpg
+Roots: [ True]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\crack13.jpg
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\crack14.jpg
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\crack15.jpg
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\crack16.jpg
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\crack17.jpg
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\crack18.jpg
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\crack19.jpg
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\crack2.jpg
+Roots: [False]
+Coating: 1
+WaterLevel: 0
+Offset: 1
+Crack: 0
+
+Image - pictures\crack20.jpg
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\crack21.jpg
+Roots: [ True]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\crack22.jpg
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\crack23.jpg
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\crack3.jpg
+Roots: [ True]
+Coating: 0
+WaterLevel: 0
+Offset: 1
+Crack: 0
+
+Image - pictures\crack4.jpg
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 1
+Crack: 0
+
+Image - pictures\crack5.jpg
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\crack6.jpg
+Roots: [False]
+Coating: 1
+WaterLevel: 0
+Offset: 1
+Crack: 0
+
+Image - pictures\crack7.jpg
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 1
+Crack: 0
+
+Image - pictures\crack8.jpg
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 1
+Crack: 0
+
+Image - pictures\crack9.jpg
+Roots: [ True]
+Coating: 0
+WaterLevel: 0
+Offset: 1
+Crack: 0
+
+Image - pictures\offset10.jpg
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 1
+Crack: 0
+
+Image - pictures\offset11.jpg
+Roots: [False]
+Coating: 1
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\offset12.jpg
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 1
+Crack: 0
+
+Image - pictures\offset13.jpg
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 1
+Crack: 0
+
+Image - pictures\offset14.jpg
+Roots: [False]
+Coating: 1
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\offset15.jpg
+Roots: [False]
+Coating: 1
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\offset16.jpg
+Roots: [False]
+Coating: 1
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\offset17.jpg
+Roots: [False]
+Coating: 1
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\offset18.jpg
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\offset19.jpg
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\offset20.jpg
+Roots: [False]
+Coating: 1
+WaterLevel: 0
+Offset: 1
+Crack: 0
+
+Image - pictures\offset21.jpg
+Roots: [False]
+Coating: 1
+WaterLevel: 0
+Offset: 1
+Crack: 0
+
+Image - pictures\offset22.jpg
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 1
+Crack: 0
+
+Image - pictures\offset23.jpg
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 1
+Crack: 0
+
+Image - pictures\offset24.jpg
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 1
+Crack: 0
+
+Image - pictures\offset25.jpg
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 1
+Crack: 0
+
+Image - pictures\offset8.jpg
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 1
+Crack: 0
+
+Image - pictures\offset9.jpg
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 1
+Crack: 0
+
+Image - pictures\roots1.jpg
+Roots: [ True]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\roots10.jpg
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 1
+Crack: 0
+
+Image - pictures\roots11.jpg
+Roots: [ True]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\roots12.jpg
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\roots13.jpg
+Roots: [ True]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\roots14.jpg
+Roots: [ True]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\roots15.jpg
+Roots: [ True]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\roots16.jpg
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\roots2.jpg
+Roots: [ True]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\roots3.jpg
+Roots: [ True]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\roots4.jpg
+Roots: [ True]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\roots5.jpg
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\roots6.jpg
+Roots: [ True]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\roots7.jpg
+Roots: [ True]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\roots8.jpg
+Roots: [ True]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\roots9.jpg
+Roots: [ True]
+Coating: 0
+WaterLevel: 0
+Offset: 1
+Crack: 0
+
+Image - pictures\rootscrack1.jpg
+Roots: [ True]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\rootscrack2.jpg
+Roots: [ True]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\rootscrack3.jpg
+Roots: [ True]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\rootscrack4.jpg
+Roots: [ True]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\rootscrack5.jpg
+Roots: [ True]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\rootscrack6.jpg
+Roots: [ True]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\rootscrack7.jpg
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\rootscrack8.jpg
+Roots: [ True]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\water0.jpg
+Roots: [ True]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\water1.jpg
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\water10.jpg
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\water11.jpg
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\water12.jpg
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\water13.jpg
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\water14.jpg
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\water15.jpg
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\water2.jpg
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\water4.jpg
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\water5.jpg
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\water6.jpg
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\water7.jpg
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\water8.jpg
+Roots: [False]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0
+
+Image - pictures\water9.jpg
+Roots: [ True]
+Coating: 0
+WaterLevel: 0
+Offset: 0
+Crack: 0

@@ -6,10 +6,23 @@ import Coating
 import waterMain
 import offset
 import mainCracks
+import glob
+images = [cv2.imread(file) for file in glob.glob("pictures/*.PNG")] + [cv2.imread(file) for file in glob.glob("pictures/*.JPG")]
+images = [file for file in glob.glob("pictures/*.PNG")] + [file for file in glob.glob("pictures/*.JPG")]
 
-image = cv2.imread("water0.jpg")
-root.checkForRoots(image)
-print(Coating.getCoating(image))
-print(waterMain.getWater(image))
-print(offset.getOffset(image))
-print(mainCracks.findCracks(image))
+#print(images)
+f = open("results.txt", "a")
+
+for x in range(len(images)):
+    image = cv2.imread(images[x])
+    f.write("\n\nImage - "+images[x])
+    f.write("\nRoots: "+str( root.checkForRoots(image)))
+    f.write("\nCoating: "+ str(Coating.getCoating(image)))
+    try:
+        f.write("\nWaterlevel: "+ waterMain.getWater(image))
+    except:
+        f.write("\nWaterLevel: 0")
+    f.write("\nOffset: "+ str( offset.getOffset(image)))
+    f.write("\nCrack: "+ str( mainCracks.findCracks(image)))
+    
+f.close()
