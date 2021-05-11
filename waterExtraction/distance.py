@@ -24,22 +24,24 @@ def getDis(line, x, y,r):
     print("No")
 #def circleArea()
 def calcWater(line,x,y,r,crop,start,output):
-    b=r
-    B=90
+    a=r
+    A=90
     c=((line[2]-line[0])**2)+((line[3]-line[1])**2)
     c=np.sqrt(c)/2 
-    C = np.degrees(np.arcsin((np.sin(np.radians(B))*c)/b))
+    C = np.degrees(np.arcsin((np.sin(np.radians(A))*c)/a))
     #C = np.arcsin((sin(90)*c)/r)
-    A = 180-B-C
-    a = (np.sin(np.radians(A))*b)/np.sin(np.radians(B))
-    '''print("line"+str(line))
+    B = 180-A-C
+    b = (np.sin(np.radians(B))*a)/np.sin(np.radians(A))
+    print("line"+str(line))
     print("R: " +str(r))
     print("c: " +str(c))
     print("C: " +str(C))
     print("A: " +str(A))
     print("a: " +str(a))
+    print("B: " +str(B))
+    print("b: " +str(b))
     print((line[0]+line[2])/2)
-    print(x-r)'''
+    print(x-r)
     lineX0 = x-r+line[0]
     lineY0 = y-r+line[1]
     lineX1 = x-r+line[2]
