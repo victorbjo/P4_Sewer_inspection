@@ -14,7 +14,7 @@ def getWater(image):
         output = image.copy()
         gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
         # detect circles in the image
-        circles = cv2.HoughCircles(gray, cv2.HOUGH_GRADIENT, 1.5, 250,param1=40,param2=100,minRadius=100,maxRadius=200)
+        circles = cv2.HoughCircles(gray, cv2.HOUGH_GRADIENT, 1.7, 250,param1=40,param2=110,minRadius=80,maxRadius=200)
         # ensure at least some circles were found
         if circles is not None:
                 # convert the (x, y) coordinates and radius of the circles to integers
@@ -27,17 +27,25 @@ def getWater(image):
                         cv2.rectangle(output, (x - 5, y - 5), (x + 5, y + 5), (0, 128, 255), -1)
                         
                         #print(x,y,r)
-        crop = output[y-r:y+r, x-r:x+r]
-
+        else:
+                print("OK")
+                #cv2.imshow("output", np.hstack([image, output]))
+                #cv2.waitKey(0)
+        maxX = x-r
+        if maxX < 0:
+                maxX = 0
+        crop = output[y-r:y+r, maxX:x+r]
         try:
                 line = (lines.findLines(crop,image,output,x-r,y-r,r))
                 result= distance.calcWater(line,x,y,r,crop,image,output)
         except:
                result = 0
+
                    
         #cv2.imshow("output", np.hstack([image, output]))
-        return result
         #cv2.waitKey(0)
-#image = cv2.imread("water1.jpg")
-#a = getWater(image)
-#print ("Water level: "+str(a)+"%")
+        return result
+        
+image = cv2.imread("pictures/roots11.jpg")
+a = getWater(image)
+print ("Water level: "+str(a)+"%")
