@@ -5,10 +5,8 @@ from matplotlib import pyplot as plt
 
 def getOffset (img):
     images = []
-    #images = [cv2.imread(file) for file in glob.glob("*.png")]
     images.append(img)
-    
-    #print(len(images))
+
     
     img_crop = []
     green = []
@@ -26,9 +24,9 @@ def getOffset (img):
     circularity_feature = []
     hasHole_feature = []
     elongation_feature = []
-
+    counter = 0
     for i in range(len(images)):
-        img_crop.append(images[i])
+        img_crop.append(img)
 
         green.append(img_crop[i][:,:,1])
 
@@ -40,11 +38,13 @@ def getOffset (img):
         thresh.append(cv2.inRange(green[i], thresh_low, thresh_high))
         thresh_eq.append(cv2.inRange(green_eq[i], thresh_low, thresh_high))
 
+        # morphology
         kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (7, 7))
         morph_open.append(cv2.morphologyEx(thresh[i], cv2.MORPH_OPEN, kernel, iterations=1))
         kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (55, 55))
         morph_close.append(cv2.morphologyEx(morph_open[i], cv2.MORPH_CLOSE, kernel, iterations=1))
 
+        # contours
         contours, hierarchy = cv2.findContours(morph_close[i], cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)
         img_contours.append(np.zeros(img_crop[i].shape))
 
@@ -52,8 +52,8 @@ def getOffset (img):
         area = np.zeros(len(contours))
         perimeter = np.zeros(len(contours))
         circularity = np.zeros(len(contours))
-        elongation = np.zeros(len(contours))
 
+        # features
         for j in range(len(contours)):
             if hierarchy[0][j][3] == -1:
                 contourIndex[j] = j
@@ -64,31 +64,26 @@ def getOffset (img):
                 rect = cv2.minAreaRect(contours[j])
                 box = cv2.boxPoints(rect)
                 box = np.int0(box)
-
                 
-                if area[j] > 3000:
+                if area[j] > 3000 and circularity[j] < 0.4 and circularity[j] > 0.03:
                     cv2.drawContours(img_contours[i], contours, int(contourIndex[j]), (0,255,255), 3)
                     cv2.drawContours(img_contours[i], [box], 0, (0,255,255), 3)
                     isOffset = 1
                     
         img_contours[i] =  cv2.resize(img_contours  [i], (int(img_contours[i].shape[1] /3), int(img_contours[i].shape[0]/3)))
+        
         #print(i, " :", perimeter)
         #cv2.imshow("a",img_contours[i])
         #cv2.waitKey()
 
+    #print("circularity: ", elongation)
         return isOffset
     
 #print(getOffset(cv2.imread("1_offset.PNG")))
 
-
     #area_feature.append(max(area))
-    #perimeter_feature = []
-    #circularity_feature = []
-    #hasHole_feature = []
-    #elongation_feature = []
     #print("area: ", max(area))
-    #print("perimeter: ", perimeter)
-    #print("circularity: ", circularity)
+
 
 testing = 1
 if not testing:
