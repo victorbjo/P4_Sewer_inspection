@@ -57,22 +57,9 @@ def getCoating (img):
                     cv2.drawContours(img_contours[i], [box], 0, (0,255,255), 2)
                     #print(elongation[j])
                     isCoating = 1
-        cv2.imshow("contours", img_contours[i])
-        cv2.imshow("original", images[i])
-        cv2.imshow("thresh", thresh[i])
-        cv2.imshow("morph", morph_close[i])
-        print("circularity: ", circularity)
-        print("perimeter: ", perimeter)
-        print("area: ", area)
-        print("elongation: ", elongation)
-        cv2.waitKey(0)
         
-    return isCoating
-names = [file for file in glob.glob("pictures/*.PNG")] + [file for file in glob.glob("pictures/*.JPG")]
-images = [cv2.imread(file) for file in glob.glob("pictures/*.PNG")] + [cv2.imread(file) for file in glob.glob("pictures/*.JPG")]
-for i in range(len(images)):
-    print(names[i])
-    getCoating(images[i])
+        return isCoating
+
     
         
 #print(getCoating(cv2.imread("1_coating.PNG")))
