@@ -55,18 +55,20 @@ def findCracks(pic):
         #find area
         if contours:
             for j in range (len(contours)):
-                if 50 < cv2.contourArea(contours[j]) < 3000:
-                    area[j] = cv2.contourArea((contours[j]))
-                    arc[j] = cv2.arcLength(contours[j], 1)
-                    circularity[j] = (4 * 3.14 * area[j]) / (int(arc[j]) ** 2)
-                    #print("circularity: ", circularity)
-                    #print("area", area)
-                    #print("arc", arc)
-                    cv2.drawContours(images[i], contours, j, (0, 255, 0), 1)
-                    #cv2.imshow("bin", Tjek[i])
-                    cv2.imshow("ss", images[i])
-                    knak = 1
-                    cv2.waitKey(0)
+                area[j] = cv2.contourArea((contours[j]))
+                arc[j] = cv2.arcLength(contours[j], 1)
+                circularity[j] = (4 * 3.14 * area[j]) / (int(arc[j]) ** 2)
+                if 50 < cv2.contourArea(contours[j]) < 1200:
+                    if 0.11 < circularity[j] < 0.88:
+                        if 0.31 < arc[j] < 351:
+                            #print("circularity: ", circularity[j])
+                            #print("area:", area[j])
+                            #print("arc", arc[j])
+                            #cv2.drawContours(images[i], contours, j, (0, 255, 0), 1)
+                            #cv2.imshow("bin", Tjek[i])
+                            #cv2.imshow("ss", images[i])
+                            knak = 1
+                            #cv2.waitKey(0)
                 # if 350 < cv2.contourArea(contours[j]) < 2000: #800
                 #     area.append(cv2.contourArea(contours[j]))
                 #     if cv2.arcLength(contours[j], True) < 2000: #200
@@ -97,15 +99,17 @@ def findCracks(pic):
 
         #show pic/contour
         #cv2.imshow("ss", con[i])
-    cv2.waitKey(0)
+    #cv2.waitKey(0)
     return (knak)
 
-# pics = []
-# pics = [cv2.imread(file) for file in glob.glob("f:/Crack/*.jpg")]
-# for t in range (len(pics)):
-#     #print(t+1)
-#     pic = pics[t]
-#     findCracks(pic)
+
+
+#pics = []
+#pics = [cv2.imread(file) for file in glob.glob("f:/Crack/*.jpg")]
+#for t in range (len(pics)):
+ #   print(t+1)
+  #  pic = pics[t]
+   # findCracks(pic)
 
 
 
