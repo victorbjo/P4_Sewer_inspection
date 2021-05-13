@@ -1,5 +1,6 @@
 import cv2
 import numpy as np
+import glob
 
 def getCoating (img):
     images = []
@@ -16,17 +17,17 @@ def getCoating (img):
     for i in range(len(images)):
         images[i] = cv2.resize(images[i], (int(images[i].shape[1] /3), int(images[i].shape[0]/3)))
 
-        images[i] = cv2.cvtColor(images[i], cv2.COLOR_BGR2HSV)
-        thresh.append(cv2.inRange(images[i], (100,20,0), (140,255,255)))
+        #images[i] = cv2.cvtColor(images[i], cv2.COLOR_BGR2HSV)
+        thresh.append(cv2.inRange(images[i], (0,15,5), (130,120,30)))
 
         
         # Morphology
         kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (15, 15))
-        morph_open.append(cv2.morphologyEx(thresh[i], cv2.MORPH_OPEN, kernel, iterations=1))
+        morph_open.append(cv2.morphologyEx(thresh[i], cv2.MORPH_CLOSE, kernel, iterations=1))
         kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (7, 7))
-        morph_erode.append(cv2.morphologyEx(morph_open[i], cv2.MORPH_ERODE, kernel))
-        kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (7, 7))
-        morph_close.append(cv2.morphologyEx(morph_erode[i], cv2.MORPH_CLOSE, kernel, iterations=1))
+        #morph_erode.append(cv2.morphologyEx(morph_open[i], cv2.MORPH_ERODE, kernel))
+        #kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (7, 7))
+        morph_close.append(cv2.morphologyEx(morph_open[i], cv2.MORPH_OPEN, kernel, iterations=1))
 
         # Contours
         contours, hierarchy = cv2.findContours(morph_close[i], cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)
@@ -51,13 +52,27 @@ def getCoating (img):
                 box = np.int0(box)
                 elongation[j] = cv2.max(int(rect[1][0]) / int(rect[1][1]), int(rect[1][1]) / int(rect[1][0]))[0]
 
-                if  area[j] > 150 and circularity[j] < 0.3 and perimeter[j] > 200 and elongation [j] > 2.5:
+                if  area[j] > 1500 and 0.45 > circularity[j] > 0.24 and 950 > perimeter[j] > 200 and 0.13 < elongation[j] < 3.5:
                     cv2.drawContours(img_contours[i], contours, int(contourIndex[j]), (0,255,255), 3)
                     cv2.drawContours(img_contours[i], [box], 0, (0,255,255), 2)
-                    print(elongation[j])
+                    #print(elongation[j])
                     isCoating = 1
-        #cv2.imshow("a", img_contours[i])
-        #cv2.waitKey(0)
-        return isCoating
-
+        cv2.imshow("contours", img_contours[i])
+        cv2.imshow("original", images[i])
+        cv2.imshow("thresh", thresh[i])
+        cv2.imshow("morph", morph_close[i])
+        print("circularity: ", circularity)
+        print("perimeter: ", perimeter)
+        print("area: ", area)
+        print("elongation: ", elongation)
+        cv2.waitKey(0)
+        
+    return isCoating
+names = [file for file in glob.glob("pictures/*.PNG")] + [file for file in glob.glob("pictures/*.JPG")]
+images = [cv2.imread(file) for file in glob.glob("pictures/*.PNG")] + [cv2.imread(file) for file in glob.glob("pictures/*.JPG")]
+for i in range(len(images)):
+    print(names[i])
+    getCoating(images[i])
+    
+        
 #print(getCoating(cv2.imread("1_coating.PNG")))
