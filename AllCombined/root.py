@@ -20,6 +20,6 @@ def checkForRoots(img):
     plt.show()
     cv2.waitKey()'''
     print(hist[-1]/hist[0])
-    return (hist[-1]/hist[0] > 0.0144)
+    return (hist[-1]/hist[0] > 0.0304)
 #img = cv2.imread("roots_IMG9.JPG")
 #print(checkForRoots(img))

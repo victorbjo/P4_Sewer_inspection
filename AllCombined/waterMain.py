@@ -46,6 +46,6 @@ def getWater(image):
         #cv2.waitKey(0)
         return result
         
-image = cv2.imread("pictures/roots11.jpg")
-a = getWater(image)
-print ("Water level: "+str(a)+"%")
+#image = cv2.imread("pictures/roots11.jpg")
+#a = getWater(image)
+#print ("Water level: "+str(a)+"%")
