@@ -82,8 +82,6 @@ def dilate(img, k_x, k_y, k_type): #works excalty like erode, but instead of che
     image = np.zeros(img.shape)
     counter = 0
     for x in range(img.shape[0]):
-        counter = counter +1
-        print(counter)
         for y in range(img.shape[1]):
             if img[x][y] == 255:
                 image[x][y] = 255
@@ -165,17 +163,19 @@ def morphol0gy(img, type, k_x, k_y, k_type):
         image2 = dilate(image1, k_x, k_y, k_type)
         return image2
 
-image = cv2.imread("3_coating.PNG")
+# below is code used for testing morphology functions:
 
-thresh = cv2.inRange(image, (100,20,0), (140,255,255))
+#image = cv2.imread("3_coating.PNG")
+#thresh = cv2.inRange(image, (100,20,0), (140,255,255))
 
-img = morphol0gy(thresh, "dilate", 9,9,"eclipse")
-kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (9,9))
-print(kernel)
-test = cv2.morphologyEx(thresh, cv2.MORPH_DILATE, kernel)
-print(img.shape)
+#img = morphol0gy(thresh, "dilate", 5,5,"rect")
+#kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (5,5))
+#print(kernel)
+#test = cv2.morphologyEx(thresh, cv2.MORPH_ERODE, kernel)
+#print(img.shape)
 #cv2.imshow("threshold", thresh)
-cv2.imshow("morph me", img)
-cv2.imshow("morph cv", test)
+#cv2.imshow("threshold", thresh)
+#cv2.imshow("morph me", img)
+#cv2.imshow("morph cv", test)
 
 
