@@ -4,9 +4,8 @@ import numpy as np
 from matplotlib import pyplot as plt
 # load image
 def findLines(img,start,output,x,y,r):
-
+    #Defining parameters
     gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
-
     kernel_size = 5
     blur_gray = cv2.GaussianBlur(gray,(kernel_size, kernel_size),0)
     low_threshold = 130

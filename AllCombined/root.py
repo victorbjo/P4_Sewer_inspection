@@ -12,14 +12,7 @@ def checkForRoots(img):
     plt.subplot(131),plt.imshow(img,cmap = 'gray')
     plt.title('Original Image'), plt.xticks([]), plt.yticks([])
     edges = edges[0:int(edges.shape[0]/2), 0:edges.shape[1]]
-    
     hist = cv2.calcHist([edges],[0],None,[256],[0,256])
-    '''plt.subplot(132),plt.imshow(edges,cmap = 'gray')
-    plt.title('Edges Image'), plt.xticks([]), plt.yticks([])
-
-    plt.show()
-    cv2.waitKey()'''
     print(hist[-1]/hist[0])
+    #Returns true if white to black pixel radius is above 0.0304
     return (hist[-1]/hist[0] > 0.0304)
-#img = cv2.imread("roots_IMG9.JPG")
-#print(checkForRoots(img))

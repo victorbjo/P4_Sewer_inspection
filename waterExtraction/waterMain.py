@@ -4,15 +4,9 @@ import numpy as np
 from matplotlib import pyplot as plt
 import lineSearch as lines
 import distance
-def doNothing():
-        print("OK")
 def getWater(image):
         # load image
-
-        #print(image.shape)
-        #print(image.shape[0])
         image = cv2.resize(image, (int(image.shape[1]/3), int(image.shape[0]/3)))
-
         output = image.copy()
         gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
         # detect circles in the image
@@ -30,16 +24,10 @@ def getWater(image):
                         
                         #print(x,y,r)
         crop = output[y-r:y+r, x-r:x+r]
-
+        #Tries to find lines
         try:
                 line = (lines.findLines(crop,image,output,x-r,y-r,r))
                 result= distance.calcWater(line,x,y,r,crop,image,output)
         except:
                result = 0
-                   
-        #cv2.imshow("output", np.hstack([image, output]))
         return result
-        #cv2.waitKey(0)
-#image = cv2.imread("water1.jpg")
-#a = getWater(image)
-#print ("Water level: "+str(a)+"%")
