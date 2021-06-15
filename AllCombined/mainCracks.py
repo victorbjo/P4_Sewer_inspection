@@ -7,7 +7,7 @@ def findCracks(pic):
     #load images
     images = [pic]
 
-    #declare vectors
+    #declare lists
     con = []
     hsv = []
     Tjek = []
