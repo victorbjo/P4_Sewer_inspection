@@ -23,14 +23,14 @@ def getCoating (img):
         
         # Morphology
         kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (15, 15))
-        morph_open.append(cv2.morphologyEx(thresh[i], cv2.MORPH_CLOSE, kernel, iterations=1))
+        morph_close.append(cv2.morphologyEx(thresh[i], cv2.MORPH_CLOSE, kernel, iterations=1))
         kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (7, 7))
         #morph_erode.append(cv2.morphologyEx(morph_open[i], cv2.MORPH_ERODE, kernel))
         #kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (7, 7))
-        morph_close.append(cv2.morphologyEx(morph_open[i], cv2.MORPH_OPEN, kernel, iterations=1))
+        morph_open.append(cv2.morphologyEx(morph_close[i], cv2.MORPH_OPEN, kernel, iterations=1))
 
         # Contours
-        contours, hierarchy = cv2.findContours(morph_close[i], cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)
+        contours, hierarchy = cv2.findContours(morph_open[i], cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)
         img_contours.append(np.zeros(images[i].shape))
 
         # Features
