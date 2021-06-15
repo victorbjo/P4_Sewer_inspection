@@ -24,7 +24,6 @@ def getOffset (img):
     circularity_feature = []
     hasHole_feature = []
     elongation_feature = []
-    counter = 0
     for i in range(len(images)):
         img_crop.append(img)
 
